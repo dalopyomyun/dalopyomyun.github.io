@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+    
+
+        #title{
+            width: 230px;
+            height: 230px;
+            margin : 0 auto;
+            border: 10px solid rgba(170, 170, 170, 0.096);
+            border-radius: 50%;
+            position: static;
+            z-index: -2;
+            
+        }
+    
+        header{
+            position: relative;
+            
+        }
+        #container{
+            border-bottom: 3px solid rgba(170, 170, 170, 0.096);
+            margin: 0px;
+            padding: 0px;
+            
+            
+        }
+    
+        #title:hover{
+            animation: headerframes 10s ease .5s infinite forwards;
+        }
+    
+    
+        #logo{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            z-index: -2;
+    
+        }
+    
+        @keyframes headerframes{
+            10%{transform: scale(-1, -1);}
+            25%{transform: scale(-3, -3);}
+            45%{transform: scale(-5, -5);}
+            55%{transform: scale(-8, -8);}
+            65%{transform: scale(-13, -13);}
+            80%{transform: scale(3,3);}
+            90%{transform: scale(1 , 1);}
+            100%{transform: scale(1, 1);}
+        }
+
+        hr{
+            margin: 0 20%;
+        }
+
+        h2{
+            text-align: center;
+            
+        }
+        #pic1{
+            width: 500px;
+            height: 500px;
+            
+            
+        }
+        #profile{
+            position : absolute;
+            top: 50%;
+            left: 40%;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        #pic1:hover{
+            
+            animation: picani 3s 1 forwards;
+            
+            
+        }
+
+        @keyframes picani{
+            10%{transform: translateX( 0px);}
+            
+            100%{transform: translateX(-300px);}
+        }
+
+
+        #pic1:hover+#profile{
+
+            animation: proani 3s 1 forwards;
+        }
+
+        @keyframes proani{
+            10%{transform: translateX( 0px); opacity: 0.1;}
+            
+            100%{transform: translateX(200px); opacity: 1;}
+        }
+
+       #pic2{
+            width: 600px;
+            height: 600px;
+       }
+       #pic2:hover{
+           transform: scale(1.2) translate(-30px, -30px);
+           box-shadow: 3px 3px 10px gray;
+
+       }
+       img{
+           max-width: 100%;
+       }
+
+       .pray{
+            width: 600px;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        .pic3-2{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        .pray:hover .pic3-2{
+            display: block;
+        }
+
+        #pic4{
+            width: 600px;
+            height: 600px;
+       }
+
+       
+    .slider{
+        width: 640px;
+        height: 680px;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    } 
+    
+    .slider input[type=radio]{
+        display: none;
+    }
+
+    ul.imgs{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    ul.imgs li{
+        position: absolute;
+        left: 640px;
+        transition-delay: 1s;
+
+        padding: 0;
+        margin: 0;
+    }
+
+.bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.55);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: #fff;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: #fff;
+}
+
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+
+.picArr{
+    width: 640px;
+    height: 680px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a href="../project/main.html"><div id="title"></div></a>
+            <h1 id="logo"><img src="../sample/image/순대로고1.jpg" style=" border-radius: 50%;" alt=""></h1>
+        </header>
+    </div>
+
+        <section>
+            <h2>안녕하세요. 저희 집 깡패녀석 미어캣 '김순대'를 소개하려합니다. <br><br>
+                <img src="../sample/image/순대 앉기 1.jpg" alt="" id="pic1">
+                <p id="profile">이름 : 김순대 <br>
+                나이 : 2살 <br>
+                주된 식량 : 밀웜, 고양이 사료 <br>
+                취미 : 장판 긁고 댕기기 <br>
+                특기 : 가출 *예의주시* <br>
+                좌우명 : 먹이 줄 땐 굽히고, 없다면 깨문다.
+                </p>
+            </h2>
+            <hr>
+            <br><br>
+            <h2>
+                순대는 광합성을 좋아하기도 하는 것 같습니다. <br><br>
+                <img src="../sample/image/광합성 순대.jpg" alt="" id="pic2">
+            </h2>
+            <hr>
+            <h2>
+                오늘도 밀웜을 많이 먹고 싶어서 기도하는 김순대씨 <br><br>
+                <div class="pray">
+                <img src="../sample/image/기도순대.jpg" alt="" class="pic3-1">
+                <img src="../sample/image/기도순대1.png" alt="" class="pic3-2">
+                </div>
+            </h2>
+            <hr>
+            <h2>
+                순대는 오늘도 하염없이 탈옥을 꿈꿔봅니다. <br><br>
+                <img src="../sample/image/탈옥꿈순대.jpg" alt="" id="pic4">
+            </h2>
+            <hr>
+        
+            <h2>
+                순대 사진 모음
+            </h2>
+            <div class="slider">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <ul id="imgholder" class="imgs">
+                <li><img src="../sample/image/꽃모자순대.jpg" alt="" class="picArr"></li>
+                <li><img src="../sample/image/애기순대.jpg" alt="" class="picArr"></li>
+                <li><img src="../sample/image/까꿍순대.jpg" alt="" class="picArr"></li>
+                <li><img src="../sample/image/산책순대.jpg" alt="" class="picArr"></li>
+            </ul>
+            <div class="bullets">
+                <label for="slide1">&nbsp;</label>
+                <label for="slide2">&nbsp;</label>
+                <label for="slide3">&nbsp;</label>
+                <label for="slide4">&nbsp;</label>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+        </section>
+
+        
+        
+</body>
+</html>

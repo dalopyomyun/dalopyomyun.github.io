@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce</title>
+</head>
+<style>
+
+
+    #title{
+        width: 230px;
+        height: 230px;
+        margin : 0 auto;
+        border: 10px solid rgba(170, 170, 170, 0.096);
+        border-radius: 50%;
+        position: static;
+        z-index: -2;
+        
+    }
+
+    header{
+        position: relative;
+    }
+    #container{
+        border-bottom: 3px solid rgba(170, 170, 170, 0.096);
+        margin: 0px;
+        padding: 0px;
+        
+        
+    }
+
+    #title:hover{
+        animation: headerframes 10s ease .5s infinite forwards;
+    }
+
+
+    #logo{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        margin: 0 auto;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: -2;
+
+    }
+
+    @keyframes headerframes{
+        10%{transform: scale(-1, -1);}
+        25%{transform: scale(-3, -3);}
+        45%{transform: scale(-5, -5);}
+        55%{transform: scale(-8, -8);}
+        65%{transform: scale(-13, -13);}
+        80%{transform: scale(3,3);}
+        90%{transform: scale(1 , 1);}
+        100%{transform: scale(1, 1);}
+    }
+
+    #wrapper{
+        margin: 0 auto;
+        width: 1300px;
+        height: 1300px;
+        border: 3px solid rgba(170, 170, 170, 0.096);
+    }
+    #listTitle{
+        width: 100%;
+        border-bottom: 3px solid #00c5cf;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #00c5cf;
+        text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        cursor: pointer;
+    }
+
+
+    #listStyle{
+        float: left;
+        width: 300px;
+        height: 100%;
+        padding-top: 1px;
+        border-right: 3px solid rgba(170, 170, 170, 0.096);
+        background-color: rgb(255, 255, 255);
+    }
+
+    ul{
+        width: auto
+    }
+
+    li{
+        border-bottom: 3px solid rgba(170, 170, 170, 0.096);
+        padding-top: 40px;
+        padding-right: 10px;
+        text-align: right;
+        font-size: 24px;
+        font-weight:500;
+        
+        
+        
+    }
+    li:hover{
+        background-color: rgb(109, 109, 252);
+        color: white;
+        cursor: pointer;
+    }
+
+    li:active{
+        background-color: rgb(109, 166, 252);
+        color: white;
+        
+    }
+
+    #content{
+        margin-top: 100px;
+        width: 970px;
+        height: 300px;
+        float: right;
+        
+    }
+
+
+    #bck{
+        margin-top: 0px;
+        width: 970px;
+        height: 300px;
+        float: right;
+        background-image: url('../sample/image/나.jpg');
+        background-size: cover;
+        opacity: 0.2;
+    }
+
+</style>
+</head>
+<body>
+
+    <div id="container">
+        <header>
+            <a href="main.html"><div id="title"></div></a>
+            <h1 id="logo">KimsProject</h1>
+        </header>
+
+        <section>
+            <div id="wrapper">
+                <div id="listStyle">
+                    <ul style="list-style: none;">
+                        <p id="listTitle">Introduce</p>
+                        <li id="li1">자기소개</li>
+                        <li id="li2">TMI</li>
+                        <li id="li3">포부</li>
+                        <li id="li4">프로젝트 소감</li>
+                    </ul>
+                    
+                </div>
+                <div id="content" style="font-size: 30px; font-family: 'Poor Story', cursive;" >
+                    
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+   
+    <script>
+        const br = "<br>";
+
+        listTitle.onclick = () => {
+            content.innerHTML = '';
+        }
+
+        li1.onclick = () => {
+            content.innerHTML = `안녕하세요 김승원입니다.${br}
+             서울시 강동구에 살고 있습니다. ${br}
+             코딩, 프로그래밍 관련해서는 ${br}
+             이번 강의들을 통해서 인생 처음으로 ${br}
+             접하고 있는 중입니다. ${br}
+             <img src = '../sample/image/나.png' style = 'margin-top : 30px;'> `;
+
+            
+
+        };
+
+        li2.onclick = () => {
+            content.innerHTML = `TMI코너에 오신걸 환영합니다.${br}
+             정말 쓸데없는 말만 적을겁니다. ${br}
+             저는 미어캣을 키웁니다. 많이 뭅니다. ${br}
+             이 글을 적고나선 산책을 다녀올겁니다. ${br}
+             읽어주셔서 감사합니다. ${br}
+             <img src = '../sample/image/티비순대.jpg' style= "width:600px; height:500px; margin-top : 30px;">`;
+        };
+
+        li3.onclick = () => {
+            content.innerHTML = `코딩, 프로그래밍을 처음 배우는만큼${br}
+             열심히 해야하는데.. 사실 그러지 못하고 있는것 같네요. ${br}
+             그래도 차근차근 포기하지 않고 해보렵니다. ${br}
+             같이 일하고 싶을 그런 프로그래머가 되도록 말이죠. ${br}
+             <img src = '../sample/image/포부.jpg' style = 'margin-top : 30px;'>`;
+        };
+        
+        li4.onclick = () => {
+            content.innerHTML = `이번 개인 웹사이트를 만드는 프로젝트 중에${br}
+             진짜 힘들었던 점은 홈페이지 내에 각 요소들의 ${br}
+             위치를 조정하는 일이었습니다. ${br}
+             정말 울고싶더라고요. ${br}
+             그래서 사실 까보면 이상한 점 투성이 이겠지만,${br}
+              공부는 확실히 되는 것 같습니다. ${br}
+              <img src = '../sample/image/hyunta.jpg' style = 'margin-top : 30px;'>`;
+        };
+
+        </script>
+    
+    
+</body>
+</html>

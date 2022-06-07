@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
+    <title>Project Main</title>
+<style>
+
+    a{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+        /* min-height: 70vh; */
+        
+        
+        z-index: 1;
+    }
+
+    h1{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 730px;
+        /* min-height: 50vh; */
+        z-index: -2;
+
+        font-size: 103px;
+        
+        
+    }
+
+    #title{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        border: 10px solid rgba(170, 170, 170, 0.096);
+        border-radius: 50%;
+    
+        
+    }
+
+    header{
+        position: relative;
+    }
+    /* #container{
+        height: 700px;
+        border-bottom: 3px solid rgba(170, 170, 170, 0.096);
+        margin: 0px;
+        padding: 0px;
+        
+    } */
+
+    #title:hover{
+        animation: headerframes 10s ease .5s infinite forwards;
+    }
+
+
+
+    @keyframes headerframes{
+        10%{transform: scale(-1, -1);}
+        25%{transform: scale(-3, -3);}
+        45%{transform: scale(-5, -5);}
+        55%{transform: scale(-8, -8);}
+        65%{transform: scale(-13, -13);}
+        80%{transform: scale(3,3);}
+        90%{transform: scale(1 , 1);}
+        100%{transform: scale(1, 1);}
+    }
+
+
+    .secUl{ 
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0%;
+        overflow: hidden;
+        
+    }
+
+
+    .secLi{
+        width: 100%;
+        height: 900px;
+        /* border: 3px solid rgb(170, 170, 170); */
+        display: flex;
+        z-index: 1;
+
+        cursor: pointer;
+    }
+
+
+    h2{
+        
+        color: rgba(255, 255, 255, 0);
+        font-size: 55px;
+        font-style: italic;
+        transform: translateX(-100px);
+        position: static;
+        z-index: 1;
+            
+    }
+
+    .text{
+        text-align: center;
+        font-size: 50px;
+        display: none;
+        font-family: 'Nanum Pen Script', cursive;
+    }
+
+    
+    p.text{   
+        margin-left: 400px;
+        padding-top: 350px;
+    }
+
+    #li1:hover .text {  
+        position: absolute;
+        display: flex;
+        
+    } 
+
+    #li1:hover h2{
+        margin-left: 30px;
+        transform: translateX(0);
+        color: rgb(255, 255, 255);
+        
+    }
+
+    #li2:hover .text {  
+        position: absolute;
+        display: flex;
+        
+    } 
+
+    #li2:hover h2{
+        margin-left: 30px;
+        transform: translateX(0);
+        color: rgb(0, 0, 0);
+        
+    }
+
+    #li3:hover h2{
+        margin-left: 30px;
+        transform: translateX(0);
+        color: rgb(255, 255, 255);
+        
+    }
+
+    #li3:hover .text {  
+        position: absolute;
+        display: flex;
+        
+    } 
+    
+
+    #li4:hover h2{
+        margin-left: 30px;
+        transform: translateX(0);
+        color: rgb(0, 0, 0);
+        
+    }
+    #li4:hover .text {  
+        position: absolute;
+        display: flex;
+        
+    } 
+
+    .transition{
+            transition-duration: .6s;
+           
+    } 
+
+</style>
+</head>
+<body>
+
+    <div id="all">
+    <header id="container">
+        <h1>KimsProject</h1>
+         <a href="../project/main.html"><div id="title"></div></a>
+    </header>
+
+    <section>
+        <div id="wrapper">
+            <ul class="secUl">
+                <li id="li1" style="background-color: #00c5cfab;"
+                onclick="location.href='01_Introduce.html'" class="secLi">
+                <p id="text1" class="text" style="color: white;"></p>
+                <h2 class="transition">Introduce</h2>    
+                </li>
+                <script>
+                    let target1 = document.querySelector("#text1");
+
+                    function randomString1(){
+                        let stringArr = ["안녕하세요. 김승원입니다. 이 탭을 클릭하시면, 자기소개 페이지로 이동합니다."];
+                        let selectString = stringArr[0];
+                        let selectStringArr = selectString.split("");
+
+                        return selectStringArr;
+                    }
+
+                    function dynamic1(randomArr){
+                        
+                            if(randomArr.length > 0){
+                                target1.textContent += randomArr.shift();
+
+                                setTimeout(function(){
+                                    dynamic1(randomArr);
+                                }, 150);
+                            } else{
+                                setTimeout(resetTyping1, 2000);
+                                
+                            }
+                        }
+
+                    dynamic1(randomString1());
+
+                    function resetTyping1(){
+                        target1.textContent = "";
+                        dynamic1(randomString1());
+                    }
+
+                    
+                    </script>
+
+                <li id="li2" style="background-color: #ffffffbb;"
+                onclick="location.href='02_My_Page.html'" class="secLi">
+                <p id="text2" class="text" style="color: black;"></p>
+                <h2 class="transition">My Page</h2>
+                </li>
+                <script>
+                        let target2 = document.querySelector("#text2");
+                    
+                    
+                        function randomString2(){
+                            let stringArr = ["제가 소개하고 싶은 저의 주제는 '애완동물'입니다. 저는 미어캣과 같이 사는 중입니다."];
+                            let selectString = stringArr[0];
+                            let selectStringArr = selectString.split("");
+                    
+                            return selectStringArr;
+                        }
+                    
+                        
+                        function dynamic2(randomArr){
+                            
+                            if(randomArr.length > 0){
+                                target2.textContent += randomArr.shift();
+                    
+                                setTimeout(function(){
+                                    dynamic2(randomArr);
+                                }, 150);
+                            } else{
+                                setTimeout(resetTyping2, 2000);
+                                   
+                            }
+                        }
+                    
+                    
+                    dynamic2(randomString2());
+                    
+                    
+                    function resetTyping2(){
+                        target2.textContent = "";
+                        dynamic2(randomString2());
+                    }
+                    
+                    
+                    
+                </script>
+
+                <li id="li3" style="background-color: #068488be;"
+                onclick="location.href='03_Programmer-loadmap.html'" class="secLi">
+                <p id="text3" class="text" style="color: white;"></p>
+                <h2 class="transition">개발자 로드맵</h2>
+                </li>
+                <script>
+                    let target3 = document.querySelector("#text3");
+                
+                
+                    function randomString3(){
+                        let stringArr = ["개발자 로드맵을 만들어보았습니다. 로드맵을 잘 짜고, 그대로 가서 좋은 개발자가 되길!!"];
+                        let selectString = stringArr[0];
+                        let selectStringArr = selectString.split("");
+                
+                        return selectStringArr;
+                    }
+                
+                    
+                    function dynamic3(randomArr){
+                        
+                        if(randomArr.length > 0){
+                            target3.textContent += randomArr.shift();
+                
+                            setTimeout(function(){
+                                dynamic3(randomArr);
+                            }, 150);
+                        } else{
+                            setTimeout(resetTyping3, 2000);
+                               
+                        }
+                    }
+                
+                
+                dynamic3(randomString3());
+                
+                
+                function resetTyping3(){
+                    target3.textContent = "";
+                    dynamic3(randomString3());
+                }
+                
+                
+                
+            </script>
+                
+
+
+                <li id="li4" style="background-color: #ffffffbb;"
+                onclick="location.href='04_SignUp.html'" class="secLi">
+                <p id="text4" class="text" style="color: black;"></p>
+                <h2 class="transition">회원 가입</h2>
+                </li>
+                <script>
+                    let target4 = document.querySelector("#text4");
+                
+                
+                    function randomString4(){
+                        // 타이핑될 텍스트를 배열로 가져와서 split으로 한글자씩 나눈다.
+                        let stringArr = ["지금까지 제 홈페이지가 마음에 드셨다면, 구독 좋... 아니 회원가입을 해주세요~"];
+                        let selectString = stringArr[0];
+                        let selectStringArr = selectString.split("");
+                
+                        return selectStringArr;
+                    }
+                
+                    
+                    function dynamic4(randomArr){
+                        
+                        if(randomArr.length > 0){
+                            target4.textContent += randomArr.shift();
+                
+                            setTimeout(function(){
+                                dynamic4(randomArr);
+                            }, 150);
+                        } else{
+                            setTimeout(resetTyping4, 2000);
+                               
+                        }
+                    }
+                
+                
+                dynamic4(randomString4());
+                
+                
+                function resetTyping4(){
+                    target4.textContent = "";
+                    dynamic4(randomString4());
+                }
+                
+                
+                
+            </script>
+            </ul>
+        </div>
+
+    </section>
+    </div>
+
+    <script>
+
+ 
+
+
+    </script>
+   
+
+    
+   
+    
+</body>
+</html>

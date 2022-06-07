@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 로드맵</title>
+    <style>
+    
+
+        #title{
+            width: 230px;
+            height: 230px;
+            margin : 0 auto;
+            border: 10px solid rgba(170, 170, 170, 0.096);
+            border-radius: 50%;
+            position: static;
+            z-index: -2;
+            
+        }
+    
+        header{
+            position: relative;
+            
+        }
+        #container{
+            border-bottom: 3px solid rgba(170, 170, 170, 0.096);
+            margin: 0px;
+            padding: 0px;
+            
+            
+        }
+    
+        #title:hover{
+            animation: headerframes 10s ease .5s infinite forwards;
+        }
+    
+    
+        #logo{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        margin: 0 auto;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: -2;
+        }
+    
+        @keyframes headerframes{
+            10%{transform: scale(-1, -1);}
+            25%{transform: scale(-3, -3);}
+            45%{transform: scale(-5, -5);}
+            55%{transform: scale(-8, -8);}
+            65%{transform: scale(-13, -13);}
+            80%{transform: scale(3,3);}
+            90%{transform: scale(1 , 1);}
+            100%{transform: scale(1, 1);}
+        }
+
+        #content{
+            width: 1300px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .map{
+            margin: 30px 80px;
+            width: 160px;
+            height: 100px;
+            border: 2px solid black;
+            z-index: 0;
+        }
+        .txt{
+            padding-top:10px;
+            text-align: center;
+        }
+
+        .map:hover{
+            background-color: rgb(175, 175, 175);
+            color: white;
+            text-shadow: 3px 3px 10px white;
+            cursor: pointer;
+        }
+
+        .map:active{
+            background-color: rgb(65, 65, 65);
+            color: rgb(247, 255, 204);
+            text-shadow: 3px 3px 10px rgb(247, 255, 204);
+            cursor: pointer;
+        }
+
+        #sub{
+            margin: 0px 30px;
+            float: right;
+            display: flex;
+            position: absolute;
+            top: 31%;
+            left: 30%;
+        }
+        
+        #innnnn{
+            width: auto;
+            position: absolute;
+            top: 53%;
+            left: 32%;
+            
+            font-size: 30px; 
+            font-family: 'Poor Story', cursive;
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a href="../project/main.html"><div id="title"></div></a>
+            <h1 id="logo">KimsProject</h1>
+        </header>
+    </div>
+    <section id="content">
+
+        <h2 id="main" class="map" ><p class="txt">개발자 로드맵</p></h2>
+        
+        <h2 id="look1" class="map" style="opacity: 0;"><p class="txt">How</p></h2>
+        <h2 id="look2" class="map" style="opacity: 0;"><p class="txt">Program</p></h2>
+        <h2 id="look3" class="map" style="opacity: 0;"><p class="txt">Direction</p></h2>
+
+        <div id="innnnn">        
+        </div>
+
+        <div id="sub">
+          <h2 id="look1-1" class="map" style="opacity: 0;" onclick="text11();"><p class="txt">Study</p></h2>
+          <h2 id="look1-2" class="map" style="opacity: 0;" onclick="text12();"><p class="txt">Practice</p></h2>
+          <h2 id="look1-3" class="map" style="opacity: 0;" onclick="text13();"><p class="txt">Listen</p></h2>
+        </div>
+
+        <div id="sub">
+          <h2 id="look2-1" class="map" style="opacity: 0;" onclick="text21();"><p class="txt">Java</p></h2>
+          <h2 id="look2-2" class="map" style="opacity: 0;" onclick="text22();"><p class="txt">DataBase</p></h2>
+          <h2 id="look2-3" class="map" style="opacity: 0;" onclick="text23();"><p class="txt">HTML</p></h2>
+        </div>
+
+        <div id="sub">
+            <h2 id="look3-1" class="map" style="opacity: 0;" onclick="text31();"><p class="txt">in 5years</p></h2>
+            <h2 id="look3-2" class="map" style="opacity: 0;" onclick="text32();"><p class="txt">in 10years</p></h2>
+            <h2 id="look3-3" class="map" style="opacity: 0;" onclick="text33();"><p class="txt">in 20years</p></h2>
+          </div>
+
+        
+    </section>
+    
+    <script>
+        // '개발자로드맵' 박스 설정
+        const look1 = document.querySelector('#look1');
+        const look2 = document.querySelector('#look2');
+        const look3 = document.querySelector('#look3');
+        const lArr = [look1, look2, look3];
+    main.onclick = () => {
+
+        for(let i = 0; i < lArr1.length; i++){
+        lArr1[i].style.opacity = "0";
+        lArr1[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr2[i].style.opacity = "0";
+        lArr2[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr3[i].style.opacity = "0";
+        lArr3[i].style.zIndex = "0";}
+            
+        for(let i = 0; i < lArr.length; i++)
+        lArr[i].style.opacity = "1";
+
+        innnnn.innerHTML = '';
+    };
+    // 'How박스' 설정
+        const look11 = document.querySelector('#look1-1');
+        const look12 = document.querySelector('#look1-2');
+        const look13 = document.querySelector('#look1-3');
+        const lArr1 = [look11, look12, look13];
+
+    look1.onclick = () =>{
+        for(let i = 0; i < lArr1.length; i++){
+        lArr1[i].style.opacity = "1";
+        lArr1[i].style.zIndex = "1";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr2[i].style.opacity = "0";
+        lArr2[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr3[i].style.opacity = "0";
+        lArr3[i].style.zIndex = "0";}
+
+        innnnn.innerHTML = '';
+    };
+    // 'Program 박스 설정'
+        const look21 = document.querySelector('#look2-1');
+        const look22 = document.querySelector('#look2-2');
+        const look23 = document.querySelector('#look2-3');
+        const lArr2 = [look21, look22, look23];
+
+    look2.onclick = () => {
+        for(let i = 0; i < lArr1.length; i++){
+        lArr1[i].style.opacity = "0";
+        lArr1[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr2[i].style.opacity = "1";
+        lArr2[i].style.zIndex = "1";}
+
+        for(let i = 0; i < lArr3.length; i++){
+        lArr3[i].style.opacity = "0";
+        lArr3[i].style.zIndex = "0";}
+
+        innnnn.innerHTML = '';
+        }
+
+        // 'Diretion 박스 설정'
+        const look31 = document.querySelector('#look3-1');
+        const look32 = document.querySelector('#look3-2');
+        const look33 = document.querySelector('#look3-3');
+        const lArr3 = [look31, look32, look33];
+
+    look3.onclick = () => {
+        for(let i = 0; i < lArr1.length; i++){
+        lArr1[i].style.opacity = "0";
+        lArr1[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr2.length; i++){
+        lArr2[i].style.opacity = "0";
+        lArr2[i].style.zIndex = "0";}
+
+        for(let i = 0; i < lArr3.length; i++){
+        lArr3[i].style.opacity = "1";
+        lArr3[i].style.zIndex = "1";}
+
+        innnnn.innerHTML = '';
+    }
+
+    // 실제적인 텍스트 출력
+    const br = "<br>" // ${br}
+    function text11(){
+        innnnn.innerHTML = `좋은 개발자가 되기 위해선 열심히 공부하는게 최선인것 같습니다.${br}
+                            지금까지 오면서 공부를 열심히 했다고 하기엔 부끄럽습니다만${br}
+                            그럼에도 포기하지 않기로 하였고, 공부하고 있습니다.${br}
+                            공부를 멈추지 않는 것이 중요할 것 같습니다.`;
+    }
+    function text12(){
+        innnnn.innerHTML = `좋은 개발자가 되기 위해선 연습만이 살길이다. 정확히는 직접 ${br}
+                            해보는 것이 가장 중요한 것 같습니다. ${br}
+                            강의를 들으며 알 것같은 것들도 뒤돌면 기억이 나지 않는...${br}
+                            직접 코드들을 입력하며 어떤 방식으로 코드가 일하는지 ${br}
+                            연습, 실제적으로 쳐보는 것이 중요할 것 같습니다.`;
+    }
+    function text13(){
+        innnnn.innerHTML = `좋은 개발자가 되기 위해선 들어야합니다. ${br}
+                            이 강의가 끝나더라도 다른 강의를 찾아듣는 것도, ${br}
+                            좋은 개발자 선배들이 조언과 격려를 듣는 것도 ${br}
+                            개발에 관한 것들을 듣는 것이 중요할 것 같습니다. `;
+    }
+    function text21(){
+        innnnn.innerHTML = `Java를 메인으로 백엔드 개발자를 생각하고 있습니다. ${br}
+                            그렇기에 Java 프로그램 자체에 대한 성격과 특징들을 ${br}
+                            철저하게 습득해야합니다. ${br}`;
+    }
+    function text22(){
+        innnnn.innerHTML = `DataBase는 쓰게 될 프로그램들, 지금으로써는 Java와 ${br}
+                            관계가 깊거나 함께 사용하기에 좋은 DB를 잘 연구해서 ${br}
+                            Java를 더욱 효과적으로 사용할 수 있도록 해야합니다.`;
+    }
+    function text23(){
+        innnnn.innerHTML = `Javascript는 프론트엔드와 가까운 백엔드같다는 느낌을 ${br}
+                            많이 받았습니다. 그렇기 때문에 열심히 연구해서 ${br}
+                            실제적인 개발에 활용할 수 있도록 하고, ${br}
+                            Java와 비슷한 점들이 많기에 서로 혼동되지 않도록 ${br}
+                            각각의 특징을 더 연구해야 합니다.`;
+    }
+    function text31(){
+        innnnn.innerHTML = `5년이라는 시간을 두고, 크고 이름있는 기업들에만 ${br}
+                            목 메는 것이 아니라, 여러 기업들을 다니며 ${br}
+                            여러가지 실제적인 경험을 쌓는 시기를 보낼 것입니다.`;
+    }
+    function text32(){
+        innnnn.innerHTML = `그 뒤에 더해 10년이라는 시간은 5년동안의 경험을 바탕으로 ${br}
+                            실제적으로 잘하는 부분이나 흥미가 가는 부분을 캐치하고 ${br}
+                            그러한 기술들을 잘 활용할 수 있는 시기를 보낼 것입니다.`;
+    }
+    function text33(){
+        innnnn.innerHTML = `그 뒤에 더해 20년이라는 시간에는 처음 배우던 때와는 ${br}
+                            많이 달라져있을 부분들에 뒤쳐지지 않도록 ${br}
+                            공부하는 것을 멈추지 않고, 후배 개발자들에게 ${br}
+                            귀감이 되는 개발자가 되도록 노력하는 시기를 보낼 것입니다.`;
+    }
+  
+    
+    </script>
+</body>
+</html>
